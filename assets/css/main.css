@@ -1,0 +1,825 @@
+@charset "UTF-8";
+/*# sourceMappingURL=main.css.map */
+@media screen and (min-width: 640px) {
+  body .pmenu {
+    width: 100%;
+  }
+  body .appetizer {
+    width: 100%;
+  }
+  body .entree {
+    width: 100%;
+  }
+  body .bev {
+    width: 100%;
+  }
+  body .header-top a {
+    float: none;
+    width: 100%;
+  }
+  body .row {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 1200px) {
+  body h1, body h2, body h3, body h4, body h5 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  body body {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 800px) {
+  body body {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 800px) {
+  body .about-page-content {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  body .starters {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  body .pmenu {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  body .entree {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .starters {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  body .pmenu {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  body .entree {
+    max-width: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}
+@media screen and (min-width: 640px) {
+  body .phone-footer {
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .menu-page {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "starters pmenu entree";
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/pizza-menu-background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .contact-location-page {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "contact location";
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .homepage-content h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .starters {
+    align-self: baseline;
+  }
+  body .entree {
+    align-self: baseline;
+  }
+  body .pmenu {
+    align-self: baseline;
+  }
+}
+@media (min-width: 640px) {
+  body .header li {
+    float: left;
+  }
+  body .header li a {
+    padding: 20px 30px;
+  }
+  body .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  body .header .menu-icon {
+    display: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-image: url(../img/food-italian.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgba(235, 227, 227, 0.5);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  color: black;
+}
+
+.header li a:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  min-height: 60px;
+  min-width: 70px;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-image: url(../img/okotoks-pizza-logo3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  background-color: rgba(235, 227, 227, 0.5);
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.homepage-content {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(197, 188, 188, 0.5);
+}
+.homepage-content h1 {
+  text-align: center;
+  -webkit-text-fill-color: #bd2727;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-size: 2rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+
+.written-content {
+  width: 100%;
+  background-color: rgba(197, 188, 188, 0.5);
+}
+.written-content h1 {
+  text-align: center;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  font-size: 2rem;
+}
+.written-content p {
+  text-align: left;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  margin: 50px;
+}
+
+.home-link-menu {
+  text-align: center;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  margin: 50px;
+}
+
+.home-link-menu a {
+  color: #bd2727;
+  z-index: 2;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "phone-footer copyright";
+  background-color: rgba(235, 227, 227, 0.5);
+  grid-row-start: footer;
+  justify-items: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 40px;
+}
+.footer h3 {
+  font-size: 1em;
+}
+.footer a:visited {
+  color: black;
+}
+.footer a {
+  color: black;
+}
+.footer .phone-footer {
+  grid-area: phone-footer;
+}
+.footer .copyright {
+  grid-area: copyright;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100px;
+}
+.phone h3 {
+  font-size: 0.75rem;
+  color: black;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+.phone a {
+  color: black;
+}
+
+.about-page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/cutting-board-tall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-page h1, .about-page p {
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+.about-page .about-page-content {
+  background-color: rgba(216, 199, 199, 0.5);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.about-page .about-page-content h1 {
+  text-align: center;
+}
+
+.kitchen {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchen-img {
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1px;
+  border: 1px solid black;
+  border-width: 2px;
+}
+
+.family {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.family-dining {
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1px;
+  border: 1px solid black;
+  border-width: 2px;
+}
+
+.menu-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/pizza-menu-background1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.starters {
+  grid-area: starters;
+  text-align: center;
+  background-color: rgba(207, 192, 192, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 1;
+  align-items: center;
+  justify-self: center;
+}
+.starters .wings-menu-image {
+  align-self: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.starters .wings-menu-image .wing {
+  padding: 1px;
+  border: 1px solid black;
+  border-width: 2px;
+}
+.starters p {
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 5px;
+}
+.starters p + p {
+  border-bottom: 1px dotted #bd2727;
+  margin-bottom: 5%;
+}
+.starters h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  text-decoration: underline solid black;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+.starters ul {
+  text-align: center;
+}
+.starters li {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+}
+
+h6 {
+  font-size: 1.75rem;
+}
+
+.pmenu {
+  grid-area: pmenu;
+  text-align: center;
+  background-color: rgba(207, 192, 192, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 2;
+  align-items: center;
+  justify-self: center;
+}
+.pmenu p {
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 5px;
+}
+.pmenu .pizza-menu-image {
+  width: 100%;
+}
+.pmenu .pizza-menu-image .pizza-pic {
+  padding: 1px;
+  border: 1px solid black;
+  border-width: 2px;
+}
+.pmenu p + p {
+  border-bottom: 1px dotted #bd2727;
+  margin-bottom: 5%;
+}
+.pmenu h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  text-decoration: underline solid black;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+.pmenu ul {
+  text-align: center;
+}
+.pmenu li {
+  display: inline-block;
+  width: 100%;
+}
+
+.entree {
+  grid-area: entree;
+  text-align: center;
+  background-color: rgba(207, 192, 192, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 3;
+  align-items: center;
+  justify-self: center;
+}
+.entree p {
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 5px;
+}
+.entree .entree-menu-image {
+  width: 100%;
+}
+.entree .entree-menu-image .entree-pic {
+  padding: 1px;
+  border: 1px solid black;
+  border-width: 2px;
+}
+.entree p + p {
+  border-bottom: 1px dotted #bd2727;
+  margin-bottom: 5%;
+}
+.entree h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  text-decoration: underline solid black;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+.entree ul {
+  text-align: center;
+}
+.entree li {
+  display: inline-block;
+  width: 100%;
+}
+
+.wing {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pizza-pic {
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.entree-pic {
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inside-content h4, .inside-content p, .inside-content a {
+  justify-self: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.review {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+.review a {
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+
+.video {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 49.55%;
+}
+.video h1 {
+  width: 100%;
+  opacity: 0;
+}
+
+.pizza-video {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  border: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goodbye {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.goodbye h4 {
+  height: 300px;
+  font-size: 1.75rem;
+  justify-self: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.contact-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  grid-area: contact;
+}
+.contact-content h1 {
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline solid black;
+}
+.contact-content h2 {
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+.contact-content h4 {
+  font-size: 1rem;
+  width: 100%;
+  padding: 5px;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+.contact-content a {
+  padding: 5%;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+}
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(216, 199, 199, 0.5);
+  padding: 20px;
+  margin: 20px;
+}
+
+.icon-contaner, i {
+  margin: 10px;
+  padding: 10px;
+  font-size: 5em;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+}
+
+.fa-twitter-square {
+  color: #1DA1F2;
+}
+
+.fa-pinterest-square {
+  color: #BD081C;
+}
+
+.fa-instagram {
+  color: #231F20;
+}
+
+.fa-reddit-square {
+  color: #FF5700;
+}
+
+.fa-envelope {
+  color: black;
+}
+
+.contact-location-page {
+  width: 100%;
+  background-image: url(../img/food-board-big.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contact-location-page .gmap {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-location-page h2 {
+  font-size: 1rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  text-align: center;
+}
+
+.location-page {
+  grid-area: location;
+}
+.location-page h2 {
+  font-size: 1.5rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline solid black;
+}
+.location-page h4 {
+  font-size: 1rem;
+  font-family: Verdana, Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.fling-minislide {
+  display: block;
+  width: 100%;
+  height: 0px;
+  padding-bottom: 66%;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fling-minislide img {
+  display: block;
+  position: absolute;
+  animation: fling-minislide 20s infinite;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fling-minislide {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+.fling-minislide img:nth-child(4) {
+  animation-delay: 0s;
+}
+
+.fling-minislide img:nth-child(3) {
+  animation-delay: 5s;
+}
+
+.fling-minislide img:nth-child(2) {
+  animation-delay: 10s;
+}
+
+.fling-minislide img:nth-child(1) {
+  animation-delay: 15s;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+/********CODE FOR WORD PRESS***************/
+
+.first-post {
+  font-size: 1em;
+  background-color: aliceblue;
+  border: 1px solid #231F20;
+  padding: 1rem;
+  margin: 1 rem 0;
+}
